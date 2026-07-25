@@ -42,7 +42,15 @@ export default function Login() {
     }
   };
 
-  if (authLoading || user) return null;
+  if (authLoading) {
+  return (
+    <div className="flex justify-center items-center min-h-screen">
+      Loading...
+    </div>
+  );
+}
+
+if (user) return null;
 
   return (
     <>

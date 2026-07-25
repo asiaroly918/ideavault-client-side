@@ -11,8 +11,12 @@ export default function TrendingIdeas() {
   useEffect(() => {
     let mounted = true;
     getTrendingIdeas(6)
-      .then((data) => {
-        if (mounted) setIdeas(data);
+      .then((res) => {
+        if (mounted) {
+          // res.data বা res যদি array হয়, সে অনুযায়ী safe set করা
+          const ideaList = Array.isArray(res) ? res : (res?.data || []);
+          setIdeas(ideaList);
+        }
       })
       .catch(() => {
         if (mounted) setIdeas([]);
@@ -20,6 +24,7 @@ export default function TrendingIdeas() {
       .finally(() => {
         if (mounted) setLoading(false);
       });
+
     return () => {
       mounted = false;
     };
@@ -44,9 +49,16 @@ export default function TrendingIdeas() {
           <Loading />
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ideas.map((idea) => (
-              <IdeaCard key={idea._id} idea={idea} />
-            ))}
+            {/* Array.isArray দিয়ে নিরাপদভাবে Rendering করা */}
+            {Array.isArray(ideas) && ideas.length > 0 ? (
+              ideas.map((idea) => (
+                <IdeaCard key={idea._id} idea={idea} />
+              ))
+            ) : (
+              <p className="text-center col-span-3 text-base-content/60">
+                No trending ideas found!
+              </p>
+            )}
           </div>
         )}
 

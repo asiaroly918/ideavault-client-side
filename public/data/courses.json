@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "AI Resume Builder",
+    "description": "An AI tool that automatically creates professional resumes based on user input and job role.",
+    "category": "AI",
+    "author": "John Doe",
+    "estimatedBudget": "$10K",
+    "targetAudience": "Job seekers and fresh graduates",
+    "likes": 120,
+    "createdAt": "2026-06-10"
+  },
+  {
+    "id": 2,
+    "title": "Smart Grocery Tracker",
+    "description": "A mobile app that tracks grocery inventory and suggests recipes based on available items.",
+    "category": "Mobile App",
+    "author": "Sarah Khan",
+    "estimatedBudget": "$5K",
+    "targetAudience": "Households and working families",
+    "likes": 85,
+    "createdAt": "2026-06-12"
+  },
+  {
+    "id": 3,
+    "title": "Freelancer Skill Marketplace",
+    "description": "A platform where freelancers can showcase skills and get matched with clients using AI.",
+    "category": "Marketplace",
+    "author": "Alex Smith",
+    "estimatedBudget": "$25K",
+    "targetAudience": "Freelancers and startups",
+    "likes": 200,
+    "createdAt": "2026-06-14"
+  },
+  {
+    "id": 4,
+    "title": "Mental Health Chatbot",
+    "description": "A chatbot that provides mental health support and daily motivation messages.",
+    "category": "HealthTech",
+    "author": "Emily Chen",
+    "estimatedBudget": "$15K",
+    "targetAudience": "Students and professionals",
+    "likes": 150,
+    "createdAt": "2026-06-15"
+  }
+]
